@@ -20,6 +20,13 @@ def test_Gaussian_dist_read_file_stdev():
     file_stdev = round(gauss.calculate_stdev(sample=True),5)
     assert(file_stdev==1.63299)
 
+def test_pdf():
+    file_name='my_file.txt'
+    gauss = Gaussian_dist(25,2)
+    #gauss.read_data_file(file_name,sample=True)
+    pdf_result = round(gauss.pdf(25),5)
+    assert(pdf_result==0.19947)
+
 
 
 
